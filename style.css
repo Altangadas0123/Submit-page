@@ -1,5 +1,5 @@
 :root {
-  --enter-font-size: 36px;
+  --enter-font-size: 16px;
   --enter-font-weight: 500;
   --enter-color: grey;
 }
@@ -16,7 +16,8 @@ body {
   justify-content: center;
   background:
     linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("city-pic.jpg") no-repeat center / cover fixed;
+    url("city-pic.jpg") no-repeat center center;
+    background-size: cover;
   width: 100%;
   height: 100vh;
 }
@@ -24,8 +25,10 @@ body {
 .container {
   display: flex;
   overflow: hidden;
-  width: 1800px;
-  height: 1200px;
+  width: 60%;
+  max-width: 800px;
+  height: 600px;
+  /* max-height: 90vh; */
   border-radius: 5%;
 }
 
@@ -40,9 +43,10 @@ form {
   flex-direction: column;
 
   width: 50%;
-  height: 100%;
-  padding: 5rem;
+  /* height: 100%; */
+  padding: 3rem;
   background-color: white;
+  padding-right: 80px;
 }
 
 .h1-h2 {
@@ -50,11 +54,11 @@ form {
   flex-direction: column;
   height: 80px;
   /* background-color: red; */
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 .h1 {
-  font-size: 60px;
+  font-size: 26px;
   font-weight: 700;
   color: rgb(2, 91, 2);
 }
@@ -70,14 +74,14 @@ form {
   justify-content: space-between;
   height: 700px;
   /* background-color: antiquewhite; */
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .input-box {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 20%;
+  height: 60px;
   /* background-color: rgb(2, 241, 189); */
 }
 .text {
@@ -88,28 +92,31 @@ form {
   /* background-color: blue; */
 }
 .placeholder-bg {
+  display: flex;
+  
+  align-items: center;
   background-color: rgb(225, 225, 225);
-  border-radius: 15px;
+  border-radius: 5px;
   border: none;
+  height: 50px;
 }
 input::placeholder {
   display: flex;
-  line-height: 100%;
-  font-size: 30px;
+  
+  line-height: 20px;
+  font-size: 10px;
   /* background-color: antiquewhite; */
 }
 
 input {
   height: 50%;
   padding-left: 20px;
-  font-size: 30px;
-  /* background-color: grey; */
 }
 
 .checkbox-container {
   display: flex;
   align-items: center;
-  height: 40px;
+  /* height: 40px; */
   /* background-color: aqua; */
 }
 .checkbox-text {
@@ -118,12 +125,12 @@ input {
   color: var(--enter-color);
 }
 .checkbox {
-  width: 25px;
-  appearance: none;
-  height: 25px;
+  width: 10px;
+  height: 10px;
   margin-left: 10px;
-
+  appearance: none;
   background-color: rgb(225, 225, 225);
+  padding: 0px;
 }
 
 .checkbox:checked {
@@ -131,13 +138,13 @@ input {
 }
 
 button {
-  height: 90px;
+  height: 100px;
   margin-top: 50px;
-  border-radius: 15px;
+  border-radius: 10px;
   background-color: black;
 
-  font-size: 40px;
-  font-weight: 700;
+  font-size: 20px;
+  font-weight: 400;
   color: white;
 }
 span {
